@@ -12,7 +12,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 
 ### Add Docker apt repository.
 add-apt-repository \
-  "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+  "deb [arch=amd64] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/ubuntu \
   $(lsb_release -cs) \
   stable"
 
