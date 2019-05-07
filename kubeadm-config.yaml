@@ -4,3 +4,4 @@ kubernetesVersion: stable
 controlPlaneEndpoint: "192.168.31.250:6443"
 networking:
   podSubnet: 192.168.0.0/16
+imageRepository: registry.cn-hangzhou.aliyuncs.com/google_containers

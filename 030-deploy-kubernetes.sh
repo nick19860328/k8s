@@ -4,7 +4,7 @@ set -xe
 
 swapoff -a
 
-kubeadm init --config=kubeadm-config.yaml  --image-repository=registry.cn-hangzhou.aliyuncs.com/google_containers
+kubeadm init --config=kubeadm-config.yaml
 
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
