@@ -23,3 +23,5 @@ backend k8s-api
   server k8s02 192.168.0.232:6443 check
   server k8s03 192.168.0.231:6443 check
 EOF
+
+systemctl restart haproxy
