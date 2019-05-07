@@ -4,7 +4,8 @@ set -xe
 
 apt install -y haproxy
 
-cat <<EOF >>/etc/haproxy/haproxy.cfg
+mv /etc/haproxy/haproxy.cfg{,.original}
+cat <<EOF >/etc/haproxy/haproxy.cfg
 frontend k8s-api
   bind 192.168.0.70:443
   bind 127.0.0.1:443
