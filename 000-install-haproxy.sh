@@ -12,6 +12,17 @@ apt update
 apt install -y haproxy
 
 cat <<EOF >>/etc/haproxy/haproxy.cfg
+frontend http_front
+   bind *:80
+   stats uri /haproxy?stats
+   default_backend http_back
+
+backend http_back
+   balance roundrobin
+   server k8s01 192.168.31.70:80 check
+EOF
+
+cat <<EOF >>/etc/haproxy/haproxy.cfg
 frontend k8s-api
   bind 192.168.31.70:443
   bind 127.0.0.1:443
