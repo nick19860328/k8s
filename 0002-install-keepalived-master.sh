@@ -23,4 +23,3 @@ EOF
 
 systemctl enable keepalived
 systemctl start keepalived
-systemctl restart keepalived
