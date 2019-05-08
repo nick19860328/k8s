@@ -2,6 +2,7 @@
 
 set -xe
 
+apt update
 apt install -y keepalived
 
 cat <<EOF >>/etc/keepalived/keepalived.conf
