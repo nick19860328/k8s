@@ -2,12 +2,13 @@
 
 set -xe
 
+apt update
 apt install -y keepalived
 
 cat <<EOF >>/etc/keepalived/keepalived.conf
 vrrp_instance VI_1 {
     state   BACKUP
-    interface ens33
+    interface enp0s8
     virtual_router_id 51
     priority 200
     advert_int 1
@@ -23,4 +24,3 @@ EOF
 
 systemctl enable keepalived
 systemctl start keepalived
-systemctl restart keepalived
