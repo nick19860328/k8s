@@ -8,7 +8,7 @@ apt install -y keepalived
 cat <<EOF >>/etc/keepalived/keepalived.conf
 vrrp_instance VI_1 {
     state MASTER
-    interface ens33
+    interface ens33enp0s8
     virtual_router_id 51
     priority 200
     advert_int 1
