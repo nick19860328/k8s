@@ -42,5 +42,4 @@ backend k8s-api
 EOF
 
 systemctl enable haproxy
-systemctl start haproxy
 systemctl restart haproxy
