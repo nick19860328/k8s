@@ -24,7 +24,7 @@ EOF
 
 cat <<EOF >>/etc/haproxy/haproxy.cfg
 frontend k8s-api
-  bind 192.168.31.150:443
+  bind 192.168.31.250:443
   bind 127.0.0.1:443
   mode tcp
   option tcplog
