@@ -10,7 +10,7 @@ kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admi
 kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
 
 
-apt install -y subversion
-svn export https://github.com/helm/charts/trunk/stable/chartmuseum chartmuseum
-helm package ./chartmuseum
-helm install --name chartmuseum chartmuseum-2.3.0.tgz
+#apt install -y subversion
+#svn export https://github.com/helm/charts/trunk/stable/chartmuseum chartmuseum
+#helm package ./chartmuseum
+#helm install --name chartmuseum chartmuseum-2.3.0.tgz
