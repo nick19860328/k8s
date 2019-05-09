@@ -4,8 +4,8 @@ set -xe
 
 swapoff -a
 
-kubeadm init --config=kubeadm-config.yaml
-#kubeadm init --pod-network-cidr=192.168.0.0/16 --image-repository=registry.cn-hangzhou.aliyuncs.com/google_containers
+#kubeadm init --config=kubeadm-config.yaml
+kubeadm init --pod-network-cidr=192.168.0.0/16 --image-repository=registry.cn-hangzhou.aliyuncs.com/google_containers
 
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
