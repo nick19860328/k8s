@@ -12,5 +12,5 @@ kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"templat
 
 #apt install -y subversion
 #svn export https://github.com/helm/charts/trunk/stable/chartmuseum chartmuseum
-#helm package ./chartmuseum
-#helm install --name chartmuseum chartmuseum-2.3.0.tgz
+#cd chartmuseum
+#helm install --name chartmuseum .
