@@ -5,3 +5,12 @@ controlPlaneEndpoint: "192.168.31.250:6443"
 networking:
   podSubnet: 192.168.0.0/16
 imageRepository: registry.cn-hangzhou.aliyuncs.com/google_containers
+etcd:
+    external:
+        endpoints:
+        - https://192.168.31.70:2379
+        - https://192.168.31.232:2379
+        - https://192.168.31.231:2379
+        caFile: /etc/kubernetes/pki/etcd/ca.crt
+        certFile: /etc/kubernetes/pki/apiserver-etcd-client.crt
+        keyFile: /etc/kubernetes/pki/apiserver-etcd-client.key
