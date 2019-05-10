@@ -5,7 +5,7 @@ set -xe
 apt update
 apt install -y keepalived
 
-cat <<EOF >>/etc/keepalived/keepalived.conf
+cat <<EOF >/etc/keepalived/keepalived.conf
 vrrp_instance VI_1 {
     state MASTER
     interface enp0s8
