@@ -19,6 +19,7 @@ add-apt-repository \
 ## Install Docker CE.
 apt-get update && apt-get install -y docker-ce=18.06.2~ce~3-0~ubuntu
 
+
 # Setup daemon.
 cat > /etc/docker/daemon.json <<EOF
 {
